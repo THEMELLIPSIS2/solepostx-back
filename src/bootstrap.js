@@ -12,6 +12,7 @@ const {
   global,
 } = require("../data/data.json");
 const { faker } = require("@faker-js/faker");
+const { generateArticles } = require("./generateArticles");
 
 async function isFirstRun() {
   const pluginStore = strapi.store({
@@ -144,10 +145,17 @@ async function importWriters() {
 
 async function importArticles() {
   return Promise.all(
-    articles.map((article) => {
-      const files = {
-        image: getFileData(`${article.slug}.jpg`),
-      };
+    articles.concat(generateArticles(25)).map((article) => {
+      let files;
+      if (!article.image) {
+        files = {
+          image: getFileData(`${article.slug}.jpg`),
+        };
+      } else {
+        files = {
+          image: getFileData(article.image),
+        };
+      }
 
       return createEntry({
         model: "article",
@@ -189,16 +197,16 @@ async function importSeedData() {
 }
 
 module.exports = async () => {
-  // const shouldImportSeedData = await isFirstRun();
+  const shouldImportSeedData = await isFirstRun();
 
-  // if (shouldImportSeedData) {
-  try {
-    console.log("Setting up the template...");
-    await importSeedData();
-    console.log("Ready to go");
-  } catch (error) {
-    console.log("Could not import seed data");
-    console.error(error);
+  if (shouldImportSeedData) {
+    try {
+      console.log("Setting up the template...");
+      await importSeedData();
+      console.log("Ready to go");
+    } catch (error) {
+      console.log("Could not import seed data");
+      console.error(error);
+    }
   }
-  // }
 };
