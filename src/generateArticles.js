@@ -33,6 +33,9 @@ const generateArticles = (qty) => {
       id: Math.floor(Math.random() * categories.length),
     };
     const image = "article-generic.jpg";
+    const releaseDate = mostlyTrue()
+      ? null
+      : faker.date.future(3).toISOString().slice(0, 10);
 
     articles.push({
       title,
@@ -43,6 +46,7 @@ const generateArticles = (qty) => {
       description,
       image,
       featured,
+      releaseDate,
     });
   }
 
