@@ -1,11 +1,14 @@
 const {
-  categories,
+  // categories,
   homepage,
   writers,
   articles,
   global,
 } = require("../data/data.json");
 const { faker } = require("@faker-js/faker");
+const { generateCategories } = require("./generateCategories");
+
+const categories = generateCategories();
 
 const mostlyTrue = () => {
   return Math.floor(Math.random() * 100) > 20;
@@ -30,7 +33,7 @@ const generateArticles = (qty) => {
       id: Math.floor(Math.random() * writers.length) + 1,
     };
     const category = {
-      id: Math.floor(Math.random() * categories.length),
+      id: Math.floor(Math.random() * categories.length) + 1,
     };
     const image = "article-generic.jpg";
     const releaseDate = mostlyTrue()

@@ -5,7 +5,7 @@ const path = require("path");
 const mime = require("mime-types");
 const set = require("lodash.set");
 const {
-  categories,
+  // categories,
   homepage,
   writers,
   articles,
@@ -13,6 +13,9 @@ const {
 } = require("../data/data.json");
 const { faker } = require("@faker-js/faker");
 const { generateArticles } = require("./generateArticles");
+const { generateCategories } = require("./generateCategories");
+
+const categories = generateCategories();
 
 async function isFirstRun() {
   const pluginStore = strapi.store({
