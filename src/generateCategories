@@ -1,0 +1,41 @@
+const brands = [
+  "adidas",
+  "anta",
+  "asics",
+  "big baller brand",
+  "converse",
+  "jordan brand",
+  "li-ning",
+  "new balance",
+  "nike",
+  "puma",
+  "reebok",
+  "under armor",
+  "vans",
+];
+
+const notBrands = ["interview", "video", "opinion"];
+
+const generateCategories = () => {
+  let categories = [];
+
+  for (let cat of brands) {
+    categories.push({
+      name: `${cat}`,
+      slug: `${cat.toLowerCase().replace(/[\W_]+/g, "-")}`,
+      isBrand: true,
+    });
+  }
+
+  for (let cat of notBrands) {
+    categories.push({
+      name: `${cat}`,
+      slug: `${cat.toLowerCase().replace(/[\W_]+/g, "-")}`,
+      isBrand: false,
+    });
+  }
+
+  return categories;
+};
+
+module.exports = { generateCategories };

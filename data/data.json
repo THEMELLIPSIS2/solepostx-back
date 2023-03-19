@@ -2,23 +2,28 @@
   "categories": [
     {
       "name": "news",
-      "slug": "news"
+      "slug": "news",
+      "isBrand": false
     },
     {
       "name": "tech",
-      "slug": "tech"
+      "slug": "tech",
+      "isBrand": false
     },
     {
       "name": "food",
-      "slug": "food"
+      "slug": "food",
+      "isBrand": false
     },
     {
       "name": "nature",
-      "slug": "nature"
+      "slug": "nature",
+      "isBrand": false
     },
     {
       "name": "story",
-      "slug": "story"
+      "slug": "story",
+      "isBrand": false
     }
   ],
   "homepage": {
