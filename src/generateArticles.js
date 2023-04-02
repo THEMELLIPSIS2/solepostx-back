@@ -39,6 +39,9 @@ const generateArticles = (qty) => {
     const releaseDate = mostlyTrue()
       ? null
       : faker.date.future(3).toISOString().slice(0, 10);
+    const youtubeURL = mostlyFalse()
+      ? "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      : null;
 
     articles.push({
       title,
@@ -50,6 +53,7 @@ const generateArticles = (qty) => {
       image,
       featured,
       releaseDate,
+      youtubeURL,
     });
   }
 
