@@ -5,24 +5,25 @@
     "singularName": "writer",
     "pluralName": "writers",
     "displayName": "Writer",
-    "name": "writer"
+    "name": "writer",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
       "type": "string"
     },
     "picture": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "articles": {
       "type": "relation",
@@ -32,6 +33,22 @@
     },
     "email": {
       "type": "string"
+    },
+    "Twitter": {
+      "type": "string",
+      "regex": "^[A-Za-z0-9_]{1,15}$"
+    },
+    "Instagram": {
+      "type": "string",
+      "regex": "^(?!.*\\.\\.)(?!.*\\.$)[^\\W][\\w.]{0,29}$"
+    },
+    "TikTok": {
+      "type": "string",
+      "regex": "^[A-Za-z0-9_.]{1,24}$"
+    },
+    "YoutubeURL": {
+      "type": "string",
+      "regex": "(https?:\\/\\/)?(www\\.)?youtube\\.com\\/(@)[\\w-]+"
     }
   }
 }
