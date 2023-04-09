@@ -42,13 +42,8 @@
       "type": "string",
       "regex": "^(?!.*\\.\\.)(?!.*\\.$)[^\\W][\\w.]{0,29}$"
     },
-    "TikTok": {
-      "type": "string",
-      "regex": "^[A-Za-z0-9_.]{1,24}$"
-    },
-    "YoutubeURL": {
-      "type": "string",
-      "regex": "(https?:\\/\\/)?(www\\.)?youtube\\.com\\/(@)[\\w-]+"
+    "youtube": {
+      "type": "string"
     }
   }
 }
