@@ -36,12 +36,13 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "articles"
+      "inversedBy": "articles",
+      "required": true
     },
     "image": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
@@ -50,7 +51,8 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::writer.writer",
-      "inversedBy": "articles"
+      "inversedBy": "articles",
+      "required": true
     },
     "featured": {
       "type": "boolean",

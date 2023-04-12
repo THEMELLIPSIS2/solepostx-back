@@ -42,7 +42,13 @@
       "type": "string",
       "regex": "^(?!.*\\.\\.)(?!.*\\.$)[^\\W][\\w.]{0,29}$"
     },
-    "youtube": {
+    "Youtube": {
+      "type": "string"
+    },
+    "TikTok": {
+      "type": "string"
+    },
+    "Facebook": {
       "type": "string"
     }
   }
