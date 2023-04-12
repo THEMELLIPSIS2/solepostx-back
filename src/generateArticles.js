@@ -24,8 +24,7 @@ const generateArticles = (qty) => {
     const title = faker.lorem.words();
     const slug = title.toLowerCase().replace(/[\W_]+/g, "-");
     const content = faker.lorem.paragraphs(
-      5,
-      "\n\n[Testing Markdown](https://www.google.com)\n\n"
+      5
     );
     const description = faker.lorem.sentence();
     const featured = mostlyFalse();

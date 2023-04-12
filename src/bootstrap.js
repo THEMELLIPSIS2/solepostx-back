@@ -189,6 +189,7 @@ async function importSeedData() {
     article: ["find", "findOne"],
     category: ["find", "findOne"],
     writer: ["find", "findOne"],
+    tags:['find','findOne']
   });
 
   // Create all entries
