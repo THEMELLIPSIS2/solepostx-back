@@ -2,12 +2,14 @@
   "dependencies": {
     "@sklinet/strapi-plugin-tinymce": "^1.0.4",
     "@strapi/plugin-graphql": "^4.0.0",
-    "@strapi/plugin-i18n": "4.7.0",
-    "@strapi/plugin-users-permissions": "4.7.0",
-    "@strapi/strapi": "4.7.0",
+    "@strapi/plugin-i18n": "4.9.1",
+    "@strapi/plugin-seo": "^1.8.0",
+    "@strapi/plugin-users-permissions": "4.9.1",
+    "@strapi/strapi": "4.9.1",
     "better-sqlite3": "8.0.1",
     "lodash.set": "^4.3.2",
-    "mime-types": "^2.1.27"
+    "mime-types": "^2.1.27",
+    "strapi-plugin-plausible": "^1.0.6"
   },
   "name": "backend",
   "private": true,
