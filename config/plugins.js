@@ -1,5 +1,13 @@
 module.exports = () => ({
-    tinymce:{
-      enabled:true
-    }
-})
+  tinymce: {
+    enabled: true,
+  },
+  plausible: {
+    config: {
+      // sharedLink: ,
+    },
+  },
+  seo: {
+    enabled: true,
+  },
+});
