@@ -12,7 +12,7 @@ import React from "react";
               }}
               outputFormat="html"
               init={{selector: 'textarea',
-              plugins: 'a11ycheck code link',
+              plugins: 'code link',
               toolbar: 'undo redo paste italic indent bold blockquote ',
             }}
             />
