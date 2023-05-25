@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "p_policies",
+  "info": {
+    "singularName": "p-policy",
+    "pluralName": "p-policies",
+    "displayName": "PPolicy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Policy": {
+      "type": "richtext"
+    }
+  }
+}
